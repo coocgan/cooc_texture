@@ -2,22 +2,7 @@
 - Official PyTorch implementation of the paper Co-occurrence Based Texture Synthesis.  
 
 ## Abstract
-We model local texture patterns using the co-occurrence
-statistics of pixel values. We then train a generative adversarial network,
-conditioned on co-occurrence statistics, to synthesize new textures from
-the co-occurrence statistics and a random noise seed. Co-occurrences
-have long been used to measure similarity between textures. That is,
-two textures are considered similar if their corresponding co-occurrence
-matrices are similar. By the same token, we show that multiple textures
-generated from the same co-occurrence matrix are similar to each other.
-This gives rise to a new texture synthesis algorithm.
-
-We show that co-occurrences offer a stable, intuitive and interpretable
-latent representation for texture synthesis. Our technique can be used to
-generate a smooth texture morph between two textures, by interpolating
-between their corresponding co-occurrence matrices. We further show an
-interactive texture tool that allows a user to adjust local characteristics
-of the synthesized texture image using the co-occurrence values directly.
+As image generation techniques mature, there is a growing interest in explainable representations that are easy to understand and intuitive to manipulate. In this work, we turn to co-occurrence statistics, which have long been used for texture analysis, to learn a controllable texture synthesis model. We propose a fully convolutional generative adversarial network, conditioned locally on co-occurrence statistics, to generate arbitrarily large images while having local, interpretable control over the texture appearance. To encourage fidelity to the input condition, we introduce a novel differentiable co-occurrence loss that is integrated seamlessly into our framework in an end-to-end fashion. We demonstrate that our solution offers a stable, intuitive and interpretable latent representation for texture synthesis, which can be used to generate a smooth texture morph between different textures. We further show an interactive texture tool that allows a user to adjust local characteristics of the synthesized texture image using the co-occurrence values directly.
 
 ## Fidelity and diversity
 <img src='figures/main_teaser.png'>
